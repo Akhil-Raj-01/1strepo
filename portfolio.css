@@ -1,0 +1,315 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+    /* To  set scrolling when using navbar instead of direct jump*/
+}
+
+.containter
+{
+    width: 100%;
+    height: 100vh; /* view height 1vh=19.2px*/
+    background-color: antiquewhite;
+    position: relative;
+}
+.navbar
+{
+    display: flex;/* gets the elemnts in div side by side */
+    justify-content: space-between;/* adds a space between nav elements */
+    width: 85%;
+    margin-left: 60px;
+    align-items: center; /* Vertically centers the image */
+}
+.logo/*resize image*/
+{
+    width: 130px;
+}
+.listitem
+{
+    display: inline-block;
+    /* Displays the  class item in a single line */
+    list-style: none;
+    /* To remove the bullet pointers of list */
+    margin: 10px 20px;
+}
+.link/* class of Nav Links */
+{
+    color: black;
+    text-decoration: none;
+    /* To remove underline link*/
+    font-weight: bold;
+    /* To change boldeness of nav links*/ 
+}
+.link:hover/* To add red hover effect */
+{
+    color: tomato;
+}
+
+.homediv/* Link  To 1st main div */
+{
+    margin: 150px 60px ;
+}
+.homeh1/* Homeh1 edit */
+{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+#homeh1span/* Name Color Change */
+{
+    color:sandybrown ;
+}
+.homep
+{
+    margin-bottom: 15px;
+}
+.cvdownload
+{
+    text-decoration: none;
+    background-color: rgb(32, 28, 241);
+    color: aliceblue;
+    padding: 5px 5px;
+    border-radius: 10px;
+}   
+
+/* Home Images Effect */
+.homeimages
+{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+}
+.homeimages img/* Descendant selector */
+{
+    position: absolute; /* To overlap both images */
+    height: 100%;  /* To adjust both image height */
+    
+    /* Intial value for  hover */
+    left:70%;
+    bottom: 0px;
+    /*  */
+
+    transform: translateX(-70%);
+    /* To null the vertical scroll bar */
+    /* x is vertical plane and (-50)is value given above */
+    
+    transition:bottom 1s,left 2s; /* controls transition speed */
+}
+
+/* Image Overlap Hover */
+.homeimages:hover #shape
+{
+    bottom: 60px;
+    /* distance to move */
+}
+.homeimages:hover #girl
+{
+    left: 50%;
+    /* distance to move */
+} 
+
+
+/* About CSS Section */
+#About
+{
+    margin: 25% 5% 0px 5%;
+}
+.aboutheading
+{
+    text-align: center;
+}
+.aboutheading h2
+{
+    font-size: 45px;
+}
+.aboutheading span
+{
+    font-size: 25px;
+    color:coral;
+    font-weight: bolder;
+}
+
+/* About Content Section */
+.about-content
+{
+    margin: 2rem;/* 1rem=16px */
+    display: grid; /* To display contents as 2 grid section side by side */
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;/* gap tag is used to enhance gap when using grid */
+}
+.about-image img
+{
+    width: 60vh;
+}
+.about-detials
+{
+    font-size: 20px;
+    font-weight: 400;
+    text-align:justify;/*start and end in same line*/
+}
+.about-info
+{
+    margin-top: 20px;
+}
+.info-box
+{
+    margin-bottom: 2vh;
+}
+.info-box span
+{
+    margin: 0px 10px;
+}
+
+/* Skills section*/
+#skills
+{
+    margin: 8% 8% 0% 8%;
+}
+.skill-heading
+{
+    text-align: center;
+}
+.skill-content
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2vh;
+    margin-top: 2vh;
+}
+.skill-img img
+{
+    width: 90%;
+    padding-left: 20vh;
+}
+.bar-container
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vh 0px;
+    margin-bottom: 3vh;
+}
+.bar-container h3,span
+{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.base-bar
+{
+    height: 0.5rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 5rem;
+    position: absolute;
+    bottom: 0%;
+}
+.html-bar 
+{
+    width: 95%;
+    background-color: orangered;
+}
+.css-bar
+{
+    width: 90%;
+    background-color: orangered;
+}
+.react-bar
+{
+    width: 85%;
+    background-color: orangered;
+}
+.js-bar
+{
+    width: 89%;
+    background-color: orangered;
+}
+
+/* Conatct*/
+#contact
+{
+    margin-top: 6%;
+    text-align: center;
+}
+#contact h3
+{
+    font-size: 5vh;
+    font-weight: 700;
+}
+#contact span
+{
+    color: chartreuse;
+    font-size: 1.5rem;
+}
+
+/* links */
+.icon-set
+{
+    margin-top: 3%;
+
+    /* to align a div centraly use this 3 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* aligning centrally */
+
+}
+.icon
+{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border: 0px solid;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon:hover 
+{
+    background-image: linear-gradient(to bottom left,red,yellow);
+    /* using multi-color*/
+}
+
+.icon:hover i
+{
+    animation: shake 1s infinite;
+}
+@keyframes shake
+{
+    10%{transform: rotate(15deg);}
+    30%{transform: rotate(-15deg);}
+    50%{transform: rotate(15deg);}
+}
+
+/* footer */
+#footer p
+{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.up-arrow
+{
+    float: right;
+    margin-top: -25px;
+    width: 30px;
+    height: 30px;
+    border: 0px solid;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom left,red,yellow);
+
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
